@@ -1,0 +1,37 @@
+plugins {
+    id 'application'
+    id 'java'
+    id 'org.springframework.boot' version '2.0.5.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.7.RELEASE'
+}
+
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-dependencies:2.0.5.RELEASE'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'com.fasterxml.jackson.core:jackson-core:2.10.1'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'junit:junit:4.12'
+    testImplementation 'org.mockito:mockito-core:2.25.0'
+}
+
+mainClassName = 'com.rezdy.Application'
+
+test {
+    afterSuite { desc, result ->
+        if (!desc.parent) {
+            println("\n\n${result.resultType} (Total: ${result.testCount}, Passed: ${result.successfulTestCount}, Failed: ${result.failedTestCount}, Skipped: ${result.skippedTestCount})")
+        }
+    }
+    testLogging {
+        exceptionFormat = 'full'
+    }
+}
