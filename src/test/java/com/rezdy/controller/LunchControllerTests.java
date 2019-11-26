@@ -42,7 +42,7 @@ public class LunchControllerTests {
                 new Recipe("Hotdog", Arrays.asList("Hotdog Bun", "Sausage", "Ketchup", "Mustard"))
         ));
 
-        mvc.perform(MockMvcRequestBuilders.get("/").param("date", String.valueOf(date)))
+        mvc.perform(MockMvcRequestBuilders.get("/lunch").param("date", String.valueOf(date)))
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
                 .andExpect(content().string(mapper.writeValueAsString(recipesExpected)));
@@ -53,7 +53,7 @@ public class LunchControllerTests {
         RecipeContainer recipesExpected = new RecipeContainer();
         recipesExpected.setRecipes(emptyList());
 
-        mvc.perform(MockMvcRequestBuilders.get("/"))
+        mvc.perform(MockMvcRequestBuilders.get("/lunch"))
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
                 .andExpect(content().string(mapper.writeValueAsString(recipesExpected)));
