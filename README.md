@@ -20,7 +20,7 @@ $ ./gradlew test
 
 ## Usage
 
-Access via browser or any API Client (e.g. Postman or Insomnia)
+Access via browser or any API Client (e.g. [Postman](https://www.getpostman.com/) or [Insomnia](https://insomnia.rest/))
 
 ``` 
 http://localhost:8080/lunch
