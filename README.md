@@ -12,12 +12,6 @@ $ cd <project>
 $ ./gradlew run
 ```
 
-## Running tests
-
-```
-$ ./gradlew test
-```
-
 ## Usage
 
 Access via browser or any API Client (e.g. [Postman](https://www.getpostman.com/) or [Insomnia](https://insomnia.rest/))
@@ -36,6 +30,12 @@ With parameter `date` (YYYY-MM-d):
 
 ```
 http://localhost:8080/lunch?date=2019-10-10 
+```
+
+## Running tests
+
+```
+$ ./gradlew clean test
 ```
 
 ## Assumptions
