@@ -7,30 +7,30 @@ import java.util.Objects;
 public class Ingredient {
 
     private String title;
-    private LocalDate best_before;
-    private LocalDate use_by;
+    private LocalDate bestBefore;
+    private LocalDate useBy;
 
-    public Ingredient(String title, LocalDate best_before, LocalDate use_by) {
+    public Ingredient(String title, LocalDate bestBefore, LocalDate useBy) {
         this.title = title;
-        this.best_before = best_before;
-        this.use_by = use_by;
+        this.bestBefore = bestBefore;
+        this.useBy = useBy;
     }
 
     public String getTitle() {
         return title;
     }
 
-    public LocalDate getBest_before() {
-        return best_before;
+    public LocalDate getBestBefore() {
+        return bestBefore;
     }
 
-    public LocalDate getUse_by() {
-        return use_by;
+    public LocalDate getUseBy() {
+        return useBy;
     }
 
     public boolean isBetweenBestBeforeAndUseBy(LocalDate date) {
-        return (date.isEqual(this.best_before) || date.isAfter(this.best_before)) &&
-                (date.isBefore(this.use_by) || date.isEqual(this.use_by));
+        return (date.isEqual(this.bestBefore) || date.isAfter(this.bestBefore)) &&
+                (date.isBefore(this.useBy) || date.isEqual(this.useBy));
     }
 
     @Override
@@ -39,7 +39,7 @@ public class Ingredient {
         if (o == null || getClass() != o.getClass()) return false;
         Ingredient that = (Ingredient) o;
         return Objects.equals(title, that.title) &&
-                Objects.equals(best_before, that.best_before) &&
-                Objects.equals(use_by, that.use_by);
+                Objects.equals(bestBefore, that.bestBefore) &&
+                Objects.equals(useBy, that.useBy);
     }
 }

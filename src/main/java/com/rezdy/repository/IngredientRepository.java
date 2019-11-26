@@ -29,8 +29,8 @@ public class IngredientRepository {
     }
 
     public List<Ingredient> getIngredientsNotExpired(LocalDate date) {
-        return ingredients.stream().sorted(Comparator.comparing(Ingredient::getBest_before).reversed())
-                .filter(ingredient -> ingredient.getUse_by().isAfter(date) || ingredient.getUse_by().isEqual(date))
+        return ingredients.stream().sorted(Comparator.comparing(Ingredient::getBestBefore).reversed())
+                .filter(ingredient -> ingredient.getUseBy().isAfter(date) || ingredient.getUseBy().isEqual(date))
                 .collect(Collectors.toList());
     }
 }
