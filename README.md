@@ -1,6 +1,6 @@
 # Foodstuffs
 
-An API client that provides lunch options from a set of recipes based on ingredients available.
+An API solution that provides lunch options from a set of recipes based on ingredients available.
 
 
 
@@ -26,12 +26,14 @@ Access via browser or any API Client (e.g. Postman or Insomnia)
 http://localhost:8080/lunch
 ```
 
-######Important note: <br>
-There is an optional parameter called `date`. <br>
-If this parameter hasn't explicitly used, it will be considered the date as today. <br>
-Otherwise, the date considered will be that used via parameter.
+> Important note: <br>
+> 
+> There is an optional parameter called `date`. <br>
+> If this parameter hasn't explicitly used, it will be considered the date as today. <br>
+> Otherwise, the date considered will be that used via parameter.
 
 With parameter `date` (YYYY-MM-d):
+
 ```
 http://localhost:8080/lunch?date=2019-10-10 
 ```
