@@ -25,6 +25,11 @@ jobs:
       
     - name: Build with Gradle
       run: ./gradlew build
+    
+    - name: Compress Images
+      uses: calibreapp/image-actions@master
+      with:
+        githubToken: ${{ secrets.GH_TOKEN }}
 
     - name: Publish to Registry
       uses: elgohr/Publish-Docker-Github-Action@master
