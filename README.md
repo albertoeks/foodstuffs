@@ -1,5 +1,7 @@
 # Foodstuffs
 
+![](https://github.com/albertoeks/foodstuffs/workflows/Build/badge.svg)
+
 An API solution that provides lunch options from a set of recipes based on ingredients available.
 
 
