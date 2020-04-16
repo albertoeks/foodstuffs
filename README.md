@@ -40,6 +40,13 @@ http://localhost:8080/lunch?date=2019-10-10
 $ ./gradlew clean test
 ```
 
+## Running with Docker
+
+```
+docker run -p=8080:8080 docker.pkg.github.com/albertoeks/foodstuffs/docker-foodstuffs:latest
+```
+Once everything has started up, you should be able to access the webapp via http://localhost:8080/lunch
+
 ## Assumptions
 
 - The recipes is ordered by the number of ingredients between `best-before` and `use-by`.
