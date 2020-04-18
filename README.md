@@ -7,6 +7,7 @@ An API solution that provides lunch options from a set of recipes based on ingre
 
 
 ## Running locally
+
 ```
 $ git clone <project> 
 $ cd <project> 
@@ -14,19 +15,27 @@ $ cd <project>
 $ ./gradlew run
 ```
 
+## Running with Docker
+
+```
+docker run -p=8080:8080 docker.pkg.github.com/albertoeks/foodstuffs/docker-foodstuffs:latest
+```
+
 ## Usage
 
-Access via browser or any API Client (e.g. [Postman](https://www.getpostman.com/) or [Insomnia](https://insomnia.rest/))
-
-``` 
-http://localhost:8080/lunch
-```
+Once everything has started up, you should be able to access the webapp via http://localhost:8080/lunch
 
 > Important note: <br>
 > 
 > There is an optional parameter called `date`. <br>
 > If this parameter hasn't explicitly used, it will be considered the date as today. <br>
 > Otherwise, the date considered will be that used via parameter.
+
+Without parameter
+
+``` 
+http://localhost:8080/lunch
+```
 
 With parameter `date` (YYYY-MM-d):
 
@@ -39,13 +48,6 @@ http://localhost:8080/lunch?date=2019-10-10
 ```
 $ ./gradlew clean test
 ```
-
-## Running with Docker
-
-```
-docker run -p=8080:8080 docker.pkg.github.com/albertoeks/foodstuffs/docker-foodstuffs:latest
-```
-Once everything has started up, you should be able to access the webapp via http://localhost:8080/lunch
 
 ## Assumptions
 
